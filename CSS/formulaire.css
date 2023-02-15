@@ -1,0 +1,40 @@
+.flex{
+    display: flex;
+}
+.justify-content-space-evenly{
+    justify-content: space-evenly;
+}
+legend{
+    background-color: blue;
+    padding-bottom: 5px;
+    color: azure;
+    font-size: 40px;
+    height: 40px;
+    border-radius: 30px;
+}
+label{
+    display: block;
+    font-size: 50px;
+    height: 75px;
+    border-radius: 30px;
+}
+input{
+    font-size: 40px;
+    height: 40px;
+    border-radius: 30px;
+}
+form{
+    margin-top: 20px;
+}
+button{
+    background-color: blue;
+    color: azure;
+    font-size: 50px;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+button :hover{
+    background-color: rgb(0, 0, 0);
+    color: azure;
+    cursor: pointer;
+}
