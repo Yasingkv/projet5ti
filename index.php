@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/animation.css">
     <link rel="stylesheet" href="CSS/formulaire.css">
+    <link rel="stylesheet" href="CSS/index2.css">
     <title>Mon agence</title>
 </head>
 <body>
