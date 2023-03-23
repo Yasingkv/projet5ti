@@ -22,12 +22,10 @@
                 Mais en fait, pas du tout. On comprend peu à peu que des humains vivent en dehors des murs et que leur planète n'est pas forcément comme la nôtre. Il y a deux millénaires, une certaine Ymir Fritz a obtenu le pouvoir du Démon qui a permis à son peuple, les Eldiens, de croître et de devenir la plus puissante des nations. Ce qui n'a pas trop plu à l'empire de Mahr, un pays ouvertement inspiré du Troisième Reich.
             </p>
         </div>
-
         <div class="block">
             <img src="Images\My_HERO_academia.webp" alt="my hero academia">
             <p><a href="https://myheroacademia.fandom.com/fr/wiki/My_Hero_Academia">my hero academia</a></p>
         </div>
-
         <div>
             <p>
                 Dans un monde où 80 % de la population possède un super‑pouvoir appelé alter, les héros font partie de la vie quotidienne. Et les super‑vilains aussi ! Face à eux se dresse l’invincible All Might, le plus puissant des héros ! Le jeune Izuku Midoriya en est un fan absolu. Il n’a qu’un rêve : entrer à la Hero Academia pour suivre les traces de son idole.

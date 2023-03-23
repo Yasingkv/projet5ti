@@ -23,11 +23,18 @@
             <li class="imageMenu"><a href="/inscription"><ion-icon size="large" name="cloud-download-outline"></ion-icon></a></li>
         </ul>
     </header>
+    
     <main>
+       
+
         <?php
             require_once "Controllers/usersControllers.php";
         ?>
-        
     </main>
+
+    
+       
+        
+    
 </body>
 </html>

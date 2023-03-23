@@ -1,7 +1,7 @@
 
     <div class="flex justify-content-space-evenly">
         <div class="flex ">
-            <form action="">
+            <form action="" method="post">
                 <fieldset>
                     <legend>connexion</legend>
                         <div>

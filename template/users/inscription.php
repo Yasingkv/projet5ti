@@ -1,17 +1,17 @@
 
     <div class="flex justify-content-space-evenly">
         <div class="flex ">
-            <form action="">
+            <form action="" method="post">
                 <fieldset>
                     <legend>vos coordonées</legend>
                     
                         <div>     
                             <label for="">Nom</label>
-                            <input name="txtNom" type="text" placeholder="votre nom">
+                            <input name="Nom" type="text" placeholder="votre nom">
                         </div>
                         <div>
                             <label for="">Prénom</label>
-                            <input name="txtprenom" type="text" placeholder="votre nom">
+                            <input name="prenom" type="text" placeholder="votre nom">
                         </div>
                         <div>
                             <label for="">Date de naissance</label>
@@ -23,7 +23,7 @@
                         </div>
                         <div>
                             <label for=""> votre mot de passe :</label>
-                            <input type="password" id="pass" name="txtMot_de_passe" required placeholder="votre MDP">
+                            <input type="password" id="pass" name="Mot_de_passe" required placeholder="votre MDP">
                         </div>
                 </fieldset>
                     <div class="flex justify-content-space-evenly">
