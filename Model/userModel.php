@@ -36,13 +36,13 @@ function ChercherUser($pdo){
 function updateUser($pdo)
 {
     try {
-        $query = "UPDATE utilisateur SET utilisateurNom = :nomUser, utilisateurMDP = :passWordUser, utilisateurMail = :emailUser WHERE id = :id";
+        $query = "UPDATE utilisateur SET utilisateurNom = :nomUser, utilisateurMDP = :passWordUser, utilisateurMail = :emailUser WHERE utilisateurID = :id";
         $updateUser = $pdo->prepare($query);
         $updateUser->execute([
             'nomUser' => $_POST['nom'],
             'emailUser' => $_POST['email'],
             'passWordUser' => $_POST['mot_de_passe'],
-            'id' => $_SESSION["user"]->id
+            'id' => $_SESSION["user"]->utilisateurID
         ]);
         reloadSession($pdo);
     } catch (PDOException $e) {
@@ -53,10 +53,10 @@ function updateUser($pdo)
 function reloadSession($pdo)
 {
     try {
-        $query = "select * from utilisateur where id = :id";
+        $query = "select * from utilisateur where utilisateurID = :id";
         $chercheUser = $pdo->prepare($query);
         $chercheUser->execute([
-            'id' => $_SESSION["user"]->id
+            'id' => $_SESSION["user"]->utilisateurID
         ]);
         $user=$chercheUser -> fetch();
         if ($user) {

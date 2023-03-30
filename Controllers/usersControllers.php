@@ -24,9 +24,9 @@ if ($uri=== "/index.php" || $uri=== "/") {
 }elseif ($uri === "/profil") {
     require_once "template/users/profil.php";
 }elseif ($uri === "/modifyProfil") {
-    if(isset($_POST["btnEnvoi"])){
+    if(isset($_POST["button"])){
         updateUser($pdo);
-        //reloadSession($pdo);
+        reloadSession($pdo);
         header("location:/profil");
     }
     require_once "template/users/inscription.php";
