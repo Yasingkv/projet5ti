@@ -1,11 +1,9 @@
 <?php
 
 $uri = $_SERVER['REQUEST_URI'];
-if ($uri === "modele") {
-    require_once "Model/userModel.php";
-}
+require_once "Model/userModel.php";
 
-if ($uri=== "/index.php") {
+if ($uri=== "/index.php" || $uri=== "/") {
     require_once "template/manga/manga.php" ;
 }elseif ($uri === "/connexion") {
     if(isset($_POST["button"])){
@@ -27,12 +25,14 @@ if ($uri=== "/index.php") {
     require_once "template/users/profil.php";
 }elseif ($uri === "/modifyProfil") {
     if(isset($_POST["btnEnvoi"])){
-        var_dump("cliqued");
         updateUser($pdo);
         //reloadSession($pdo);
         header("location:/profil");
     }
-    require_once "Templates/users/inscription.php";
+    require_once "template/users/inscription.php";
+}elseif ($uri === "/deconnexion") {
+    session_destroy();
+    header('location:/');
 }
 
 function VerifEmptyData()

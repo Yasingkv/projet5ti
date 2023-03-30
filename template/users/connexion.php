@@ -6,15 +6,15 @@
                     <legend>connexion</legend>
                         <div>
                             <label for="">Entrez un mail :</label>
-                            <input type="email" id="mail" placeholder="votre adresse mail">
+                            <input type="email" id="mail" name="email" placeholder="votre adresse mail">
                         </div>
                         <div>
                             <label for=""> votre mot de passe :</label>
-                            <input type="password" id="pass" name="password" required placeholder="votre MDP">
+                            <input type="password" id="pass" name="mot_de_passe" required placeholder="votre MDP">
                         </div>
                 </fieldset>
                     <div class="flex justify-content-space-evenly">
-                        <button class="button">Button</button>
+                        <input type="submit" name="button" value="Button">
                     </div>
                         
             </form>

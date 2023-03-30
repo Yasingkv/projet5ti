@@ -3,15 +3,7 @@
         <ol>
             <div>
                 <li>Nom</li>
-                <p>de Mahieu</p>
-            </div>
-            <div>
-                <li>Prénom</li>
-                <p>Benoit</p>
-            </div>
-            <div>
-                <li>Adresse postale</li>
-                <p>Place de la route, 5151 Anvers</p>
+                    <p style="font-size: large;"><?= $_SESSION['user']->utilisateurNom ?></p>
             </div>
             <div>
                 <li>Photo de profil</li>
@@ -21,6 +13,8 @@
                 <img id="imageProfil" src="Images/profil.png" alt="Mon image de profil">
             </div>
         </ol>
+
+<a href="/modifyProfil">Modifier votre profil</a>
     
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

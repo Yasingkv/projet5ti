@@ -2,14 +2,13 @@
 
 function createUser($pdo){
     try {
-        $query = "insert into utilisateurs(nomUser, prenomUser, loginUser, passWordUser, role) values (:nomUser, :prenomUser, :loginUser, :passWordUser, :role)";
+        $query = "insert into utilisateur(utilisateurNom, utilisateurMDP, utilisateurRole, utilisateurMail) values (:nomUser, :passWordUser, :role, :mail)";
         $ajouteUser = $pdo->prepare($query);
         $ajouteUser->execute([
             'nomUser' => $_POST['nom'],
-            'prenomUser' => $_POST['prenom'],
-            'loginUser' => $_POST['login'],
             'passWordUser' => $_POST['mot_de_passe'],
-            'role' => 'user'
+            'role' => 'user',
+            'mail' => $_POST['email'],
         ]);
     } catch (PDOException $e) {
         $message = $e->getMessage();
@@ -18,10 +17,10 @@ function createUser($pdo){
 }
 function ChercherUser($pdo){
     try {
-        $query = "select * from utilisateurs where loginUser=:loginUser and passWordUser=:passWordUser";
+        $query = "select * from utilisateur where utilisateurMail=:mail and utilisateurMDP=:passWordUser";
         $chercheUser = $pdo->prepare($query);
         $chercheUser->execute([
-            'loginUser' => $_POST['login'],
+            'mail' => $_POST['email'],
             'passWordUser' => $_POST['mot_de_passe']
         ]);
         $user=$chercheUser -> fetch();
@@ -37,11 +36,10 @@ function ChercherUser($pdo){
 function updateUser($pdo)
 {
     try {
-        $query = "UPDATE utilisateurs SET nomUser = :nomUser, prenomUser = :prenomUser, passWordUser = :passWordUser, emailUser = :emailUser WHERE id = :id";
+        $query = "UPDATE utilisateur SET utilisateurNom = :nomUser, utilisateurMDP = :passWordUser, utilisateurMail = :emailUser WHERE id = :id";
         $updateUser = $pdo->prepare($query);
         $updateUser->execute([
             'nomUser' => $_POST['nom'],
-            'prenomUser' => $_POST['prenom'],
             'emailUser' => $_POST['email'],
             'passWordUser' => $_POST['mot_de_passe'],
             'id' => $_SESSION["user"]->id
@@ -55,7 +53,7 @@ function updateUser($pdo)
 function reloadSession($pdo)
 {
     try {
-        $query = "select * from utilisateurs where id = :id";
+        $query = "select * from utilisateur where id = :id";
         $chercheUser = $pdo->prepare($query);
         $chercheUser->execute([
             'id' => $_SESSION["user"]->id
@@ -69,3 +67,14 @@ function reloadSession($pdo)
         die($message);
     }
 }
+
+/*try {
+    $query = "SELECT * FROM biens";
+    $ajoute = $pdo->prepare($query);
+    $ajoute->execute();
+    $biens = $ajoute->fetchAll();
+} catch (PDOException $e) {
+    $message = $e->getMessage();
+    die($message);
+}
+echo '<pre>' , var_dump($biens) , '</pre>';*/
