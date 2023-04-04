@@ -9,7 +9,7 @@
                             <input type="email" id="mail" name="email" placeholder="votre adresse mail">
                         </div>
                         <div>
-                            <label for=""> votre mot de passe :</label>
+                            <label for="Password"> votre mot de passe :</label>
                             <input type="password" id="pass" name="mot_de_passe" required placeholder="votre MDP">
                         </div>
                 </fieldset>

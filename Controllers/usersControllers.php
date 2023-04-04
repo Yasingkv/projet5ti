@@ -3,9 +3,8 @@
 $uri = $_SERVER['REQUEST_URI'];
 require_once "Model/userModel.php";
 
-if ($uri=== "/index.php" || $uri=== "/") {
-    require_once "template/manga/manga.php" ;
-}elseif ($uri === "/connexion") {
+
+if ($uri === "/connexion") {
     if(isset($_POST["button"])){
         ChercherUser($pdo);
         header('location:/');

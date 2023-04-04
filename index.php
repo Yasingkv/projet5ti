@@ -13,18 +13,19 @@ require_once('Config/dataBaseConnexion.php')
     <link rel="stylesheet" href="CSS/animation.css">
     <link rel="stylesheet" href="CSS/formulaire.css">
     <link rel="stylesheet" href="CSS/index2.css">
-    <title>Mon agence</title>
+    <title>mon projet</title>
 </head>
 <body>
     <header>
         <ul class="flex space-evenly">
             <li class="menu"><a href="index.php">Home</a></li>
-            <li  class="menu"><a href="/profil">Page profil</a></li>
                 <?php if(isset($_SESSION["user"])) : ?>
+                    <li  class="menu"><a href="/profil">Page profil</a></li>
                     <li class="menu"><a href="/deconnexion">deconnexion</a></li>
                 <?php else :  ?>
                     <li class="menu"><a href="/connexion">Connexion</a></li>
                     <li class="menu"><a href="/inscription">Inscription</a></li>
+                    
                 <?php endif ?>
             <li class="imageMenu"><a href="index.php"><ion-icon size="large" name="home-outline"></ion-icon></a></li>
             <li class="imageMenu"><a href="/profil"><ion-icon size="large" name="person-outline"></ion-icon></a></li>
@@ -38,6 +39,7 @@ require_once('Config/dataBaseConnexion.php')
 
         <?php
             require_once "Controllers/usersControllers.php";
+            require_once "Controllers/mangaControllers.php";
         ?>
     </main>
 

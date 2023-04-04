@@ -1,7 +1,37 @@
 img{
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 50px;
+    box-shadow: 1px 1px 50px rgb(0, 238, 255);
 }
-.justify-content-space-between{
-    justify-content: space-between;
+.justify-content-space-around{
+    justify-content: space-around;
+}
+.taille{
+    width: 300px;
+    background-color: black;
+
+}
+p{
+    color: azure;
+    text-align: center;
+}
+a{
+    color: rgb(0, 225, 255);
+    font-size: 50px;
+    
+}
+.encadrer{
+    border-style: solid;
+    margin: 100px 100px 100px;
+    padding: 20px 20px 20px;
+    border-radius: 10%;
+    border-color: blue;
+    box-shadow: 10px 5px 5px rgb(5, 151, 209);
+}
+.populariter{
+    font-size: 25px;
+    color: rgb(0, 68, 255);
+}
+.wrap{
+    flex-wrap: wrap;
 }
