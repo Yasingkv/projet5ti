@@ -29,6 +29,11 @@ if ($uri === "/connexion") {
         header("location:/profil");
     }
     require_once "template/users/inscription.php";
+}elseif ($uri === "/deleteProfil") {
+    deleteProfil($pdo);
+    session_destroy();
+    header("location:/inscription");
+
 }elseif ($uri === "/deconnexion") {
     session_destroy();
     header('location:/');

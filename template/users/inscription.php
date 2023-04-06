@@ -21,7 +21,7 @@
                             <?php if(isset($messageError["mot_de_passe"])) : ?> <p class="text-danger"> <?= str_replace('_',' ',$messageError["mot_de_passe"]) ?> </p> <?php endif ?>
                         </div>
                 </fieldset>
-                    <div class="flex justify-content-space-evenly">
+                    <div class="flex justify-content-space-evenly  ">
                         <input type="submit" name="button" value="Button">
                     </div>
                         

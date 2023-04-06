@@ -50,6 +50,21 @@ function updateUser($pdo)
         die($message);
     }
 }
+
+function deleteProfil($pdo)
+{
+    try {
+        $query = "delete from utilisateur where  utilisateurID = :id";
+        $deleteProfil = $pdo->prepare($query);
+        $deleteProfil->execute([
+            'id' => $_SESSION["user"]->utilisateurID
+        ]);
+        reloadSession($pdo);
+    } catch (PDOException $e) {
+        $message = $e->getMessage();
+        die($message);
+    }
+}
 function reloadSession($pdo)
 {
     try {

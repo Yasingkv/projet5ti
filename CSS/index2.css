@@ -35,3 +35,10 @@ a{
 .wrap{
     flex-wrap: wrap;
 }
+input{
+    background-color: rgb(18, 42, 151);
+    box-shadow: 1px 1px 25px rgb(2, 217, 255);
+}
+label{
+    color: rgb(0, 38, 255);
+}
